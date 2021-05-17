@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Articles{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% for article in articles %}
+    <article class="article">
+      <header>
+        <div>
+          <h1>{{ article['article_id'] }}</h1>
+          <div class="about">with {{ article['words_count'] }} words from category {{ article['words_count'] }}</div>
+        </div>
+      </header>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
