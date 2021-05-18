@@ -11,5 +11,7 @@ https://github.com/Trilian/projet9.git
 
 
 Lien vers les azure function :
+
 https://recommandationsystem.azurewebsites.net/api/colaborativeBasedModel
+
 https://recommandationsystem.azurewebsites.net/api/contentBasedModel
