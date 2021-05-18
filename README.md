@@ -5,4 +5,9 @@
 - le fichier P9_presentation : la présentation pour la soutenance du projet
 - le dossier azure_fonction contient les fonctions pour les deployer en local
 - le dossier api_mobile contient l'API mobile fournit par Julien avec l'ajout de l'URL vers l'azure fonction
-- le dossier base_donnees_flask contient la base de données sql
+
+Lien vers le GitHub :
+https://github.com/Trilian/projet9.git
+Lien vers les azure function :
+https://recommandationsystem.azurewebsites.net/api/colaborativeBasedModel
+https://recommandationsystem.azurewebsites.net/api/contentBasedModel
