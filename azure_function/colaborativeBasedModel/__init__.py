@@ -1,13 +1,14 @@
 import logging
-
 import azure.functions as func
 import joblib
 import json
 
-sparse_person_content = joblib.load('sprMatriceUser.pkl')
-model_cf = joblib.load('modelCF.pkl')
+# on charge les fichiers nécessaires pour les prédictions
+sparse_person_content = joblib.load('sparse_item_user.pkl')
+model_cf = joblib.load('colab_model.pkl')
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
+    # récupération de l'utilisateur
     logging.info('Python HTTP trigger function processed a request.')
 
     user_id = req.params.get('userId')
@@ -18,7 +19,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             pass
         else:
             user_id = req_body.get('userId')
-    print(user_id)
+    # on récupère les recommandations données par le modèle
     if user_id:
         recommendations = model_cf.recommend(int(user_id), sparse_person_content, N=5,
                                              filter_already_liked_items=True)

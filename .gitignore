@@ -1,1 +1,6 @@
 /data/data_source/articles_embeddings.pickle
+/data/data_output/article_matrice.pkl
+/azure_function/colab_model.pkl
+/data/data_output/colab_model.pkl
+/data/data_output/interactions_user.pkl
+/data/data_output/sparse_item_user.pkl
